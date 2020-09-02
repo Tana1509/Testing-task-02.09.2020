@@ -1,0 +1,284 @@
+<!-- <?php
+$dbc = mysql_connect('localhost', 'root', 'oursite');
+if(isset($_POST['submit']))
+{
+  echo 'Yes'
+}
+else {
+  echo ''
+}
+?> -->
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/533eabfae1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://allfont.ru/allfont.css?fonts=source-sans-pro-semibold"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./libs/selectric_custom.css" />
+    <link rel="stylesheet" href="./src/index.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="upperCircls">
+          <div class="leftCicls">
+            <div class="gitCircle">
+              <img src="./img/git1.png" alt="git1" />
+            </div>
+            <div class="registerBtn">
+              <div class="inCircle">
+                <img src="./img/in_1.png" alt="Linkendin" />
+              </div>
+              <div class="registrationBtn">
+                <a href="#win1"> <img src="./img/pen.png" alt="regButton"/></a>
+              </div>
+            </div>
+          </div>
+          <div class="rightCircls">
+            <div class="starCircle">
+              <img src="./img/yellow__star.png" alt="yellow__star" />
+            </div>
+            <div class="facebookCircle">
+              <img src="./img/facebook_top.png" alt="facebook_top" />
+            </div>
+          </div>
+        </div>
+        <div class="lowerCircls">
+          <div class="leftCicls__2">
+            <div class="twitterCircle">
+              <img src="./img/twit1.png" alt="twit1" />
+            </div>
+            <div class="leftLowerCickls">
+              <div class="circle">
+                <img src="./img/circle.png" alt="circle" />
+              </div>
+              <div class="leftStar">
+                <img src="./img/yellow__star2.png" alt="yellow__star2" />
+              </div>
+            </div>
+          </div>
+          <div class="rightCircls__2">
+            <div class="smallLinkendin">
+              <img src="./img/in_2.png" alt="in_2" />
+            </div>
+            <div class="git2"><img src="./img/git2.png" alt="git2" /></div>
+            <div class="smallTwit">
+              <img src="./img/twit2.png" alt="twit2" />
+            </div>
+            <div class="bigTwit"><img src="./img/twit3.png" alt="twit3" /></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dm-overlay" id="win1">
+        <div class="dm-table">
+          <div class="dm-cell">
+            <div class="registration">
+              <div class="login__registerNew">
+                <p>Login To Your Account</p>
+                <p class="slash">/</p>
+                <p>Register New</p>
+              </div>
+              <div class="formWindow">
+                <div class="titie">
+                  <div class="regIcon">
+                    <img src="./img/Compose_-_alt.png" alt="a pan" />
+                  </div>
+
+                  <p>Login To Your Account</p>
+                  <p class="slash">/</p>
+                  <p>Register New</p>
+                </div>
+
+                <div class="registrationForm__container2">
+                  <div class="subtitle">
+                    <div class="line">
+                      <div class="circle">
+                        <p>/</p>
+                      </div>
+                    </div>
+                    <div class="regWord">
+                      <h2>Register</h2>
+                    </div>
+                  </div>
+                  <div class="forms">
+                    <div class="login__form active">
+                      <form action="#">
+                        <label class="label" for="name"
+                          ><p class="labelText">User Name</p>
+                          <p class="eror"></p
+                        ></label>
+                        <input
+                          type="text"
+                          name="userName"
+                          id="name"
+                          placeholder="User Name"
+                          pattern="[a-zA-Z0-9]+"
+                          minlength="4"
+                          maxlength="10"
+                          required
+                          data-validate-field="userName"
+                        />
+                        <br />
+                        <label class="label" for="pass"
+                          ><p class="labelTextP">Password</p>
+                          <p class="eror" id="erorP"></p
+                        ></label>
+                        <input
+                          type="password"
+                          name="password"
+                          id="pass"
+                          placeholder="Password"
+                          required
+                          data-validate-field="password"
+                        /><br />
+                        <div class="formBtn">
+                          <input
+                            type="checkbox"
+                            class="rememberMe"
+                            id="check"
+                          />
+                          <label for="check" class="checkLebel">
+                            Remember My password
+                          </label>
+
+                          <button class="btn" type="submit">Login</button>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="reg__Form">
+                      <form action="#" class="regForm">
+                        <label class="label" for="emailReg"
+                          ><p class="emaiText">Email</p>
+                          <p class="erorReg" id="erorEmail"></p
+                        ></label>
+
+                        <div class="input">
+                          <input type="email" name="email" id="emailReg" />
+                          <img
+                            src="./img/warning-sign.png"
+                            alt="warning-sign"
+                          />
+                        </div>
+                        <label class="label" for="nameReg"
+                          ><p class="labelReg">User Name</p>
+                          <p class="erorReg" id="erorRegg"></p>
+                        </label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            name="userName"
+                            id="nameReg"
+                            minlength="4"
+                            maxlength="10"
+                            required
+                          />
+                          <img
+                            src="./img/check-symbol.png"
+                            alt="check-symbol"
+                          />
+                        </div>
+                        <label class="label" for="passReg"
+                          ><p id="labelTextPass">Password</p>
+                          <p class="erorReg" id="erorReg"></p
+                        ></label>
+                        <div class="input">
+                          <input
+                            type="password"
+                            name="userPassword"
+                            pattern="[a-zA-Z0-9]+"
+                            id="passReg"
+                            required
+                          />
+                        </div>
+
+                        <div class="formReg__btn">
+                          <button type="submit">Register</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="message">
+                    <p>
+                      You no longer need to enter a password every time you use
+                      the site
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="calc">
+      <div class="dm-table">
+        <div class="calculator">
+          <h2>Калькулятор расчета количества ковриков</h2>
+          <form class="calcForm" action="#">
+            <div class="selector">
+              <p>Ширина комнаты</p>
+              <select class="sellW" name="widthSel" id="calaWidth">
+                <option value=" "></option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+              </select>
+            </div>
+            <div class="selector">
+              <p>Длина комнаты</p>
+              <select class="sellH" name="heightSel" id="calalcHeight">
+                <option value=" "></option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+              </select>
+            </div>
+            <!-- <button class="btn3">Culculate</button> -->
+          </form>
+          <div class="result">
+            <p class="resultText"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./libs/jquery-3.5.0.js"></script>
+    <script src="./libs/jquery.selectric.js"></script>
+    <script src="./src/selectric.js"></script>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
