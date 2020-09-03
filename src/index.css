@@ -487,6 +487,10 @@ undefined {
   color: #be0808;
 }
 
+.dm-overlay .dm-table .dm-cell .registration .registrationForm__container2 .forms .login__form .label .eror .hide {
+  display: none;
+}
+
 .dm-overlay .dm-table .dm-cell .registration .registrationForm__container2 .forms .login__form .formBtn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -722,8 +726,14 @@ undefined {
   display: none;
 }
 
-.dm-overlay .dm-table .dm-cell .registration .registrationForm__container2 .forms .reg__Form .label .erorReg, .dm-overlay .dm-table .dm-cell .registration .registrationForm__container2 .forms .reg__Form .label #erorReg {
+.dm-overlay .dm-table .dm-cell .registration .registrationForm__container2 .forms .reg__Form .label .erorReg,
+.dm-overlay .dm-table .dm-cell .registration .registrationForm__container2 .forms .reg__Form .label #erorReg {
   color: #be0808;
+}
+
+.dm-overlay .dm-table .dm-cell .registration .registrationForm__container2 .forms .reg__Form .label .erorReg .hide,
+.dm-overlay .dm-table .dm-cell .registration .registrationForm__container2 .forms .reg__Form .label #erorReg .hide {
+  opacity: 0;
 }
 
 .dm-overlay .dm-table .dm-cell .registration .registrationForm__container2 .forms .reg__Form .formReg__btn {

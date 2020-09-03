@@ -308,6 +308,9 @@ section {
                 }
                 .eror {
                   color: #be0808;
+                  .hide {
+                    display: none;
+                  }
                 }
               }
               .formBtn {
@@ -408,8 +411,12 @@ section {
                 .hide {
                   display: none;
                 }
-                .erorReg, #erorReg {
+                .erorReg,
+                #erorReg {
                   color: #be0808;
+                  .hide {
+                    opacity: 0;
+                  }
                 }
               }
               .formReg__btn {

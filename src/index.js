@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
     let nameLength = $("#name").val().length;
     console.log(nameLength);
     if (nameLength > 3) {
-      console.log("Поле валидно");
+      eror.addClass("hide");
     } else {
       eror.html("Имя слишком короткое");
       labelText.addClass("hide");
@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
     }
     let password = $("#pass").val().length.trim;
     if (password >= 6) {
-      console.log("Поле валидно");
+      erorP.addClass("hide");
     } else {
       erorP.html("Пароль должен состоять минимум из 6 символов");
       labelTextP.addClass("hide");
@@ -74,18 +74,20 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     let nameLengthReg = $("#nameReg").val().length;
     if (nameLengthReg > 3) {
-      console.log("Поле валидно");
+      erorReg.addClass("hide");
     } else {
       erorReg.html("Имя слишком короткое");
       labelReg.addClass("hide");
     }
-    let password = $("#passReg").val().length.trim;
-    if (password >= 6) {
-      console.log("Поле валидно");
+    let password = $("#passReg").val().length;
+    if (password > 6) {
+      console.log('fffffff')
+      erorPass.addClass("hide");
     } else {
       erorPass.html("Пароль должен состоять минимум из 6 символов");
       labelTextPass.addClass("hide");
     }
+
 
     function validateEmail(email) {
       const re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -97,10 +99,12 @@ jQuery(document).ready(function($) {
 
     if (validateEmail(email)) {
       console.log("Поле валидно");
+      erorEmail.addClass("hide");
+
     } else {
       erorEmail.html("Email " + email + " введен не коректно");
       emaiText.addClass("hide");
     }
-    return false;
+    // return false;
   });
 });
